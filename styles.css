@@ -40,26 +40,52 @@ body, a:link, a:visited, a:active{
 
 @keyframes fadeIn {
   0%   { opacity:1; }
-  25%  { opacity 0.5; }
+  25%  { opacity: 0.5; }
   50%  { opacity:0; }
-  75%  { opacity 0.5; }
+  75%  { opacity: 0.5; }
   100% { opacity:1; }
 }
 
-
 .fly {
-  position:relative;
-  border:10px solid rgb(33, 155, 163);
-  border-radius:10px;
-  animation-name: flying;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  animation: flying 5s ease-in-out forwards infinite;
 }
 
 @keyframes flying {
 
-  0% {transform: translateY(100px);}
-  25% {transform: translatex(100px); }
-  50% {transform: translateX(-100px);}
-  75% {}
+  0% {transform: translateX(0) translateY(0);}
+  10% {transform: translateX(50px) translateY(50px);}
+  20% {transform: translateX(150px) translateY(30px);}
+  30% {transform: translateX(100px) translateY(0px);}
+  40% {transform: translateX(50px) translateY(-23px);}
+  50% {transform: translateX(0) translateY(-75px);}
+  60% {transform: translateX(-50px) translateY(-50px);}
+  70% {transform: translateX(-100px) translateY(-20px);}
+  80% {transform: translateX(-150px) translateY(10px);}
+  90% {transform: translateX(-50px) translateY(30px);}
+  100% {transform: translateX(0px) translateY(0px);}
 }
+
+
+/* POKEMON */
+.crobat {
+  border: none;
+  content: url("./assets/crobat.gif");
+  height: 200px;
+  width: 200px;
+}
+
+.gastly {
+  border: none;
+  content: url("./assets/gastly.gif");
+  height: 100px;
+  width: 100px;
+}
+
+
+.plusle {
+  border: none;
+  content: url("./assets/plusle.gif");
+  height: 100px;
+  width: 100px;
+}
+

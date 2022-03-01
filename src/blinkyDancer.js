@@ -2,6 +2,7 @@ var BlinkyDancer = function(top, left, timeBetweenSteps) {
   //use apply here for multiple arguments, or can also use call with manually typed in arguments
   this.timeBetweenSteps = timeBetweenSteps;
   Dancer.apply(this, arguments);
+  this.$node.addClass('plusle');
   // Dancer.call(this, top, left, timeBetweenSteps);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,

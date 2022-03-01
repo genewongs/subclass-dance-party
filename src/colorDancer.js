@@ -1,7 +1,7 @@
 var ColorDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   Dancer.apply(this, arguments);
-
+  this.$node.addClass('gastly');
 };
 
 //Prototypes
