@@ -45,3 +45,21 @@ body, a:link, a:visited, a:active{
   75%  { opacity 0.5; }
   100% { opacity:1; }
 }
+
+
+.fly {
+  position:relative;
+  border:10px solid rgb(33, 155, 163);
+  border-radius:10px;
+  animation-name: flying;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flying {
+
+  0% {transform: translateY(100px);}
+  25% {transform: translatex(100px); }
+  50% {transform: translateX(-100px);}
+  75% {}
+}
