@@ -9,12 +9,24 @@ ColorDancer.prototype = Object.create(Dancer.prototype);
 ColorDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   //move up and down
-  var topH = this.top + 50;
-  var topD = this.top - 50;
 
-  this.$node.animate({ "top": "+=500px" }, "slow");
-  this.$node.animate({ "top" : "-=500px" }, "slow");
-  //on mouseover, fade in and out.s
+  var windowHeight = (window.innerHeight);
+  //can use translateY or just inline css.
+  var dancerHeight = this.$node.position();
+
+  //if below screen height, bring it back up.
+  if (dancerHeight.top >= windowHeight - 50) {
+    this.$node.css('top', '-=200');
+  }
+
+  if (this.$node.hasClass('float')) {
+    this.$node.removeClass('float ghost');
+    // this.$node.css('top', '+=50')
+  } else {
+    this.$node.addClass('float');
+    // this.$node.css('top', '-=50')
+  }
+  //on mouseover, fade in and out.
 
 };
 

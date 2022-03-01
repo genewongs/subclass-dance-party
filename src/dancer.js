@@ -2,7 +2,6 @@
 var Dancer = function(top, left, timeBetweenSteps) {
 
   // use jQuery to create an HTML <span> tag
-  console.log(document.getElementById('#topbar'));
   this.timeBetweenSteps = timeBetweenSteps;
   this.top = top;
   this.left = left;
