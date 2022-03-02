@@ -3,11 +3,13 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("./assets/lavender-town.jpg");
+  /* added some css here to accomodate for 'offscreen' */
+  background-position: right -150px bottom -100px;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: rgb(146, 209, 230);
 }
 .title, .addDancerButton{
   padding:5px 12px;
@@ -15,10 +17,11 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: rgb(45, 24, 67);
 }
 .title{
   background-color: #777;
+
 }
 .dancer {
   border:10px solid red;
@@ -52,19 +55,18 @@ body, a:link, a:visited, a:active{
 
 @keyframes flying {
 
-  0% {transform: translateX(0) translateY(0);}
-  10% {transform: translateX(50px) translateY(50px);}
-  20% {transform: translateX(150px) translateY(30px);}
+  0% {transform: translateX(0) translateY(0) scaleX(-1);}
+  10% {transform: translateX(50px) translateY(50px) scaleX(-1);}
+  20% {transform: translateX(150px) translateY(30px) scaleX(-1);}
   30% {transform: translateX(100px) translateY(0px);}
   40% {transform: translateX(50px) translateY(-23px);}
   50% {transform: translateX(0) translateY(-75px);}
   60% {transform: translateX(-50px) translateY(-50px);}
   70% {transform: translateX(-100px) translateY(-20px);}
-  80% {transform: translateX(-150px) translateY(10px);}
-  90% {transform: translateX(-50px) translateY(30px);}
-  100% {transform: translateX(0px) translateY(0px);}
+  80% {transform: translateX(-150px) translateY(10px)scaleX(-1);}
+  90% {transform: translateX(-50px) translateY(30px)scaleX(-1);}
+  100% {transform: translateX(0px) translateY(0px) scaleX(-1);}
 }
-
 
 /* POKEMON */
 .crobat {
@@ -72,6 +74,13 @@ body, a:link, a:visited, a:active{
   content: url("./assets/crobat.gif");
   height: 200px;
   width: 200px;
+  transition: all ease-in-out 1s;
+}
+
+.crobatHover {
+  height: 400px;
+  width: 400px;
+  transition: all ease-in-out 1s;
 }
 
 .gastly {
@@ -81,11 +90,22 @@ body, a:link, a:visited, a:active{
   width: 100px;
 }
 
-
-.plusle {
+.misdreavus {
   border: none;
-  content: url("./assets/plusle.gif");
+  content: url("./assets/misdreavus.gif");
   height: 100px;
   width: 100px;
 }
 
+
+
+/* LINE UP */
+.lineUp {
+  padding:5px 12px;
+  float:right;
+}
+
+.double {
+  transform: scale(2);
+  transition: all linear 0.1ms;
+}

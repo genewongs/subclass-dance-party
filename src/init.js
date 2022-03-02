@@ -25,11 +25,33 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    //implement the dancers into window array below.
+    window.dancers.push(dancer);
   });
+
+  //Line Up Function here?
+  $('.lineUp').on('click', function(event) {
+    //iterate through all dancers and call changePosition
+    window.dancers.forEach(pokemon => {
+      pokemon.lineUp();
+    });
+  });
+
+  //MouseOver function
+  window.dancers.forEach(pokemon => {
+    pokemon.addEventListener('click', function(event) {
+      console.log('hovered!');
+    });
+  });
+
 });
 
+//IDEAS
+//on mousehover - make that pokemon grow huge in size?
+//we can probably do this by forEach over window array and add event handler.
+//then change the CSS property
